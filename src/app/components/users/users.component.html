@@ -1,0 +1,28 @@
+  
+<div class="container">
+    <table class="table table-bordered table-inverse">
+      <tr>
+        <th>Email</th>
+        <th>First Name</th>
+        <th>Last name</th>
+        <th>CNP</th>
+      </tr>
+      <tr *ngFor="let user of users">
+        <td>
+          {{user.email}}
+        </td>
+        <td>
+          {{user.firstName}}
+        </td>
+        <td>
+          {{user.lastName}}
+        </td>
+        <td>
+          {{user.cnp}}
+        </td>
+      </tr>
+    </table>
+    <div>
+      <a *ngIf="isLoggedIn" class="nav-link" href="/logout" (click)=handleLogout()>Logout</a>
+    </div>
+  </div>
